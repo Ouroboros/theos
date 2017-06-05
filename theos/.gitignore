@@ -5,6 +5,6 @@
 sdks/*
 toolchain/*
 
-include/*
+#include/*
 lib/*
 !*/.keep
