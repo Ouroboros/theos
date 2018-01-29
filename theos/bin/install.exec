@@ -1,6 +1,6 @@
 #!/bin/bash
 if [[ TARGET_INSTALL_REMOTE -eq 1 ]]; then
-	args=(ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no)
+	args=(sshpass -p alpine ssh -o LogLevel=ERROR -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no)
 
 	if [[ ! -z "$THEOS_DEVICE_PORT" ]]; then
 		args+=(-p "$THEOS_DEVICE_PORT")
